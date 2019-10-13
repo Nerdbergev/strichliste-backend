@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env
 /public/bundles/
@@ -12,5 +11,8 @@
 
 /.idea
 data.sqlite
+composer.lock
 symfony.lock
 
+public/*
+!public/index.php
