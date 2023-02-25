@@ -4,7 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Tag;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method Tag|null find($id, $lockMode = null, $lockVersion = null)
@@ -14,7 +14,7 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class TagRespository extends ServiceEntityRepository {
 
-    function __construct(RegistryInterface $registry) {
+    function __construct(ManagerRegistry $registry) {
         parent::__construct($registry, Tag::class);
     }
 
